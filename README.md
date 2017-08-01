@@ -12,3 +12,8 @@ a common plot script deal with any style log file
 log.0是一个例子,绘制结果如下
 
 ![](https://img.vim-cn.com/be/f5ffa3ae654229ef4ea0e64ba8602c19e757ee.png)
+
+# logplotpd
+save log to csv 
+
+保存log日志到csv格式,分隔符可以mod,格式也可以mod.
