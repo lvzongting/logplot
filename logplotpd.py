@@ -5,6 +5,7 @@ import sys
 import numpy as np
 import re
 import matplotlib.pyplot as plt
+import pandas as pd
 colors = ('b', 'g', 'r', 'c', 'm', 'y', 'k')
 
 data = {}
@@ -28,13 +29,6 @@ for line in logfile:
             except:
                 continue
 
-for num,i in enumerate(item):
-    #print len(data[i]),type(data[i])
-    #plt.figure(num)
-    plt.subplot(len(idx),1,num+1)
-    plt.plot(data[i],label=i,color=colors[num%len(colors)])
-    plt.legend(loc="upper left")
-
-
-
-plt.show()
+df = pd.DataFrame(data)
+#print(df)
+df.to_csv(sys.argv[1]+'.data', sep='\t')
